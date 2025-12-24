@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div id="theme-toggle">
+      <h3>
+        <span id="toggle">Light</span>
+        <span id="image">☀️</span>
+      </h3>
+    </div>
+    <h1>To Do App</h1>
+    <div id="task-form">
+      <input type="text" placeholder="Title" name="title" id="title-input" />
+      <textarea
+        type="text"
+        placeholder="Description"
+        name="description"
+        id="description-input"
+      ></textarea>
+      <input
+        type="text"
+        placeholder="Category"
+        name="category"
+        id="category-input"
+        class="category"
+        list="category-suggestions"
+      />
+      <datalist id="category-suggestions">
+        <option value="Work"></option>
+        <option value="Personal"></option>
+        <option value="Urgent"></option>
+        <option value="Shopping"></option>
+        <option value="Health"></option>
+      </datalist>
+
+      <input type="date" id="date-input" class="date" />
+      <button id="taskform-cancel-button" type="button">cancel</button>
+      <button id="add-button" type="button">Add</button>
+    </div>
+    <input type="text" id="search-input" placeholder="🔍 Search tasks..." />
+    <div id="todo-list"></div>
+    <div id="edit-form">
+      <input type="text" placeholder="title" name="title" id="edit-title" />
+      <textarea
+        type="text"
+        placeholder="description"
+        name="description"
+        id="edit-description"
+      ></textarea>
+      <input
+        type="text"
+        placeholder="Category"
+        name="category"
+        id="edit-category"
+        list="category-suggestions"
+      />
+      <input type="date" id="edit-date" />
+      <button id="cancel-button" type="button">cancel</button>
+      <button id="edit-button" type="button">Edit</button>
+    </div>
+    <button id="add" type="button">Add New Task</button>
+    <script src="todo.js"></script>
+  </body>
+</html>
